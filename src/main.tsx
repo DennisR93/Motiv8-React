@@ -9,7 +9,7 @@ import './styles/main.scss';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/Motiv8-React">
         <Router />
       </BrowserRouter>
     </HelmetProvider>

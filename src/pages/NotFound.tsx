@@ -9,11 +9,11 @@ const NotFound: React.FC = () => {
 
     return (
         <>
-            <SEO title={t('notFound.title')} />
+            <SEO title={t('common.notFound.title')} />
             <div className={`container ${styles.pageContainer}`}>
-                <h1>{t('notFound.title')}</h1>
-                <p>{t('notFound.desc')}</p>
-                <Link to="/" className="btn">{t('notFound.homeLink')}</Link>
+                <h1>{t('common.notFound.title')}</h1>
+                <p>{t('common.notFound.message')}</p>
+                <Link to="/" className="btn">{t('common.notFound.homeButton')}</Link>
             </div>
         </>
     );
