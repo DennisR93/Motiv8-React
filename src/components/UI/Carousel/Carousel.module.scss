@@ -34,7 +34,7 @@
 
     :global(.swiper) {
         width: 100%;
-        overflow: visible; // Allow navigation arrows to be visible
+        overflow: hidden; // Changed from visible to hidden
     }
 
     :global(.swiper-wrapper) {
@@ -45,6 +45,8 @@
         width: 100%;
         max-width: 600px;
         flex-shrink: 0;
+        display: flex;
+        justify-content: center;
     }
 }
 
