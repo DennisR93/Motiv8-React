@@ -1,21 +1,12 @@
 .carouselContainer {
     width: 100%;
-    max-width: 800px; // Increased back to 800px to accommodate arrows + image
+    max-width: 900px; // Main container width (800-900px range)
     margin: 0 auto;
     padding: 2rem 0;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.carouselContentWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 1rem;
-    position: relative;
 }
 
 .sectionTitle {
@@ -26,28 +17,20 @@
     text-transform: uppercase;
 }
 
-.swiperContainer {
+.carouselContentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 600px; // Match image width
-    margin: 0;
-    overflow: hidden; // Prevent slides from showing outside
+    gap: 2rem; // Space between arrows and image container
+    position: relative;
+}
 
-    :global(.swiper) {
-        width: 100%;
-        overflow: hidden; // Changed from visible to hidden
-    }
-
-    :global(.swiper-wrapper) {
-        align-items: center;
-    }
-
-    :global(.swiper-slide) {
-        width: 100%;
-        max-width: 600px;
-        flex-shrink: 0;
-        display: flex;
-        justify-content: center;
-    }
+// Image container - 600px max width
+.imageContainer {
+    width: 100%;
+    max-width: 600px;
+    flex-shrink: 0;
 }
 
 .slideContent {
@@ -56,20 +39,16 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+    width: 100%; // Takes 100% of image container space
 }
 
 .imageWrapper {
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
+    width: 100%; // Takes 100% of image container space
+    height: 400px; // Can be adjusted if text needs more space
     margin-bottom: 1.5rem;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
 
     img {
         width: 100%;
@@ -89,9 +68,10 @@
     font-size: 1.2rem;
     color: var(--color-gray-dark);
     line-height: 1.6;
-    max-width: 600px;
+    width: 100%; // Takes 100% of image container space
 }
 
+// Navigation arrows - positioned on sides of image container
 .navArrow {
     background: none;
     border: none;
@@ -102,10 +82,10 @@
     justify-content: center;
     padding: 0.5rem;
     transition: transform 0.2s ease, color 0.2s ease;
-    flex-shrink: 0; // Prevent shrinking
+    flex-shrink: 0;
 
     svg {
-        width: 3rem; // Larger arrows
+        width: 3rem;
         height: 3rem;
         fill: currentColor;
     }
@@ -115,30 +95,47 @@
         color: var(--color-primary-dark);
     }
 
+    &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
     &:disabled {
         opacity: 0.3;
         cursor: not-allowed;
     }
 
     @media (max-width: 768px) {
-        display: none; // Hide external arrows on mobile, rely on swipe
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 }
 
+// Play/Pause button - positioned on same line as image box (RTL/LTR aware)
 .autoplayControl {
-    margin-top: 1rem; // Position below the carousel
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid var(--color-gray-light);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--color-primary);
     border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     color: var(--color-primary);
     transition: transform 0.2s ease, background-color 0.2s ease;
+
+    // Desktop: Align to the right/left with spacing
+    align-self: flex-end;
+    margin-inline-start: 1rem; // Spacing from the image container
+
+    // RTL: Align to the left
+    &[data-direction="rtl"] {
+        align-self: flex-start;
+    }
 
     &:hover {
         transform: scale(1.1);
@@ -151,17 +148,48 @@
     }
 
     svg {
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.5rem;
+        height: 1.5rem;
         fill: currentColor;
+    }
+
+    @media (max-width: 768px) {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-top: 1rem;
+        margin-inline-start: 0; // Remove side margin on mobile
+        align-self: center; // Center on mobile
+
+        svg {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
     }
 }
 
-// RTL Support
+// RTL Support for arrows
 :global([dir="rtl"]) .navArrow {
-    transform: scaleX(-1); // Flip arrow direction for RTL
+    svg {
+        transform: scaleX(-1); // Flip arrow direction for RTL
+    }
+}
 
-    &:hover {
-        transform: scaleX(-1) scale(1.1);
+// Responsive adjustments
+@media (max-width: 768px) {
+    .carouselContainer {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .carouselContentWrapper {
+        gap: 1rem;
+    }
+
+    .imageContainer {
+        max-width: 100%;
+    }
+
+    .imageWrapper {
+        height: 300px;
     }
 }
