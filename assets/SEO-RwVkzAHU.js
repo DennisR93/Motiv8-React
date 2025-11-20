@@ -1,0 +1,1 @@
+import{u as a,j as t,H as r}from"./index-V5ur5PMR.js";const m=({title:e,description:i})=>{const{t:s}=a(),n=s("common.brandName"),o=e?`${e} | ${n}`:n;return t.jsxs(r,{children:[t.jsx("title",{children:o}),t.jsx("meta",{name:"description",content:i||s("home.hero.subtitle")}),t.jsx("meta",{name:"viewport",content:"width=device-width, initial-scale=1"})]})};export{m as S};
