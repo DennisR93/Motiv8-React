@@ -30,9 +30,21 @@
     width: 100%;
     max-width: 600px; // Match image width
     margin: 0;
+    overflow: hidden; // Prevent slides from showing outside
+
+    :global(.swiper) {
+        width: 100%;
+        overflow: visible; // Allow navigation arrows to be visible
+    }
 
     :global(.swiper-wrapper) {
         align-items: center;
+    }
+
+    :global(.swiper-slide) {
+        width: 100%;
+        max-width: 600px;
+        flex-shrink: 0;
     }
 }
 
@@ -43,6 +55,8 @@
     justify-content: center;
     text-align: center;
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .imageWrapper {
