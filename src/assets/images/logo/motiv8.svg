@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <defs>
+    <style>
+      .text { font-family: 'Arial', sans-serif; font-weight: 900; font-style: italic; }
+      .subtitle { font-family: 'Arial', sans-serif; font-weight: 700; letter-spacing: 2px; }
+    </style>
+  </defs>
+  
+  <!-- Main Text -->
+  <text x="10" y="90" class="text" font-size="100" fill="#FF0000">M</text>
+  <text x="100" y="90" class="text" font-size="100" fill="#FFFFFF">OTIV</text>
+  
+  <!-- The '8' / Infinity Symbol approximation -->
+  <path d="M350,90 C330,90 320,70 335,55 C350,40 370,40 385,55 C400,70 390,90 370,90 L350,90" 
+        fill="none" stroke="#FF0000" stroke-width="12" stroke-linecap="round" display="none"/>
+        
+  <!-- Alternative 8 using text for better font matching if path fails -->
+  <text x="330" y="90" class="text" font-size="100" fill="#FF0000">8</text>
+
+  <!-- Subtitle -->
+  <text x="105" y="115" class="subtitle" font-size="14" fill="#FFFFFF">DANIEL TESEMA</text>
+</svg>
