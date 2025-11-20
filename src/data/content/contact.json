@@ -1,0 +1,51 @@
+{
+    "title": {
+        "en": "Contact Us",
+        "he": "צור קשר"
+    },
+    "subtitle": {
+        "en": "All options to contact us",
+        "he": "כל האפשרויות ליצירת קשר"
+    },
+    "methods": {
+        "address": {
+            "label": {
+                "en": "Address",
+                "he": "כתובת"
+            },
+            "value": {
+                "en": "HaBonim 8-2, Netanya",
+                "he": "הבונים 8-2, נתניה"
+            }
+        },
+        "whatsapp": {
+            "label": {
+                "en": "WhatsApp",
+                "he": "וואטסאפ"
+            },
+            "value": "053-338-5338"
+        },
+        "phone": {
+            "label": {
+                "en": "Phone",
+                "he": "טלפון"
+            },
+            "value": "053-338-5338"
+        },
+        "email": {
+            "label": {
+                "en": "Email",
+                "he": "אימייל"
+            },
+            "value": "motiv8gym@gmail.com"
+        },
+        "instagram": {
+            "label": "Instagram",
+            "value": "@motiv8gym"
+        },
+        "facebook": {
+            "label": "Facebook",
+            "value": "Motiv8 Gym"
+        }
+    }
+}

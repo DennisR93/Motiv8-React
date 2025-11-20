@@ -1,0 +1,348 @@
+.pageContainer {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.pageContainer h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+.aboutSection {
+    margin-bottom: 3rem;
+}
+
+.aboutSection h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-black);
+}
+
+/* Mission & Vision */
+.missionVisionGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.mvCard {
+    background-color: var(--color-gray-light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.mvCard:hover {
+    transform: translateY(-3px);
+}
+
+.mvCard h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.mvCard p {
+    color: var(--color-gray-dark);
+    /* Ensure text is readable on light bg */
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* The Center Line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--color-gray-light);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+}
+
+.timelineItem {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* The Red Dot */
+.timelineItem::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: var(--color-white);
+    border: 4px solid var(--color-primary);
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Content Box Styling */
+.timelineContent {
+    padding: 2rem;
+    background-color: var(--color-gray-light);
+    border-radius: var(--border-radius);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.timelineContent:hover {
+    transform: translateY(-3px);
+}
+
+/* Default LTR Styles (English) */
+.timelineItem:nth-child(odd) {
+    left: 0;
+    padding-right: 40px;
+    /* Space for line */
+}
+
+.timelineItem:nth-child(even) {
+    left: 50%;
+    padding-left: 40px;
+    /* Space for line */
+}
+
+.timelineItem:nth-child(odd) .timelineContent {
+    text-align: left;
+    border-right: 4px solid var(--color-primary);
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+    text-align: left;
+    border-left: 4px solid var(--color-primary);
+}
+
+/* Dots LTR */
+.timelineItem:nth-child(odd)::after {
+    right: 0;
+    transform: translateX(50%);
+    /* Reverted to 50% */
+}
+
+.timelineItem:nth-child(even)::after {
+    left: 0;
+    transform: translateX(-50%);
+    /* Reverted to -50% */
+}
+
+/* RTL Overrides (Hebrew) */
+:global([dir="rtl"]) {
+    .timelineItem:nth-child(odd) {
+        left: 0;
+        padding-left: 40px;
+        padding-right: 10px;
+    }
+
+    .timelineItem:nth-child(even) {
+        left: -50%;
+        padding-right: 40px;
+        padding-left: 10px;
+    }
+
+    .timelineItem:nth-child(odd) .timelineContent {
+        text-align: right;
+        border-right: none;
+        border-left: 4px solid var(--color-primary);
+    }
+
+    .timelineItem:nth-child(even) .timelineContent {
+        text-align: right;
+        border-left: none;
+        border-right: 4px solid var(--color-primary);
+    }
+
+    /* Dots RTL */
+    .timelineItem:nth-child(odd)::after {
+        left: 0;
+        right: auto;
+        transform: translateX(-50%);
+        /* Reverted to -50% */
+    }
+
+    .timelineItem:nth-child(even)::after {
+        right: 0;
+        left: auto;
+        transform: translateX(50%);
+        /* Reverted to 50% */
+    }
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 50%;
+        /* Center the line */
+        right: auto;
+    }
+
+    /* Reset LTR/RTL specific positioning for mobile single column */
+    .timelineItem,
+    :global([dir="rtl"]) .timelineItem {
+        width: 100%;
+        padding: 0;
+        /* Remove side padding */
+        left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .teamCard {
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        border: none;
+        /* Removing border as well to match "remove background" intent fully if that was implied, or just to clean it up */
+    }
+
+    .testimonialCard {
+        border: 1px solid var(--color-gray-light);
+        box-shadow: none;
+        /* Optional: match the flat look */
+    }
+
+
+    .timelineItem:nth-child(odd),
+    .timelineItem:nth-child(even),
+    :global([dir="rtl"]) .timelineItem:nth-child(odd),
+    :global([dir="rtl"]) .timelineItem:nth-child(even) {
+        left: 0;
+    }
+
+    /* Hide dots on mobile */
+    .timelineItem::after,
+    :global([dir="rtl"]) .timelineItem::after {
+        display: none;
+    }
+
+    .timelineContent,
+    :global([dir="rtl"]) .timelineContent {
+        text-align: center;
+        border: none;
+        /* Remove side borders */
+        width: 90%;
+        margin: 0 auto;
+        /* Center the card */
+        z-index: 2;
+        /* Ensure it sits above the line if needed */
+        background-color: var(--color-gray-light);
+        /* Ensure background covers line */
+    }
+
+    /* Specific RTL Mobile adjustments */
+    :global([dir="rtl"]) {
+        .timeline::after {
+            left: 50%;
+            right: auto;
+        }
+
+        .timelineItem {
+            padding: 0;
+        }
+
+        .timelineContent {
+            text-align: center;
+            border: none;
+        }
+    }
+}
+
+/* Team */
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.teamCard {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--color-gray-light);
+    border-radius: var(--border-radius);
+    transition: transform 0.3s;
+}
+
+.teamCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+}
+
+.avatarPlaceholder {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-gray-light);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.role {
+    display: block;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Testimonials */
+.testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonialCard {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--color-primary);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--color-gray-dark);
+}
+
+.author {
+    font-weight: bold;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .pageContainer h1 {
+        font-size: 2rem;
+    }
+}

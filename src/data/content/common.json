@@ -1,0 +1,88 @@
+{
+    "nav": {
+        "home": {
+            "en": "Home",
+            "he": "בית"
+        },
+        "about": {
+            "en": "About",
+            "he": "אודות"
+        },
+        "training": {
+            "en": "Training",
+            "he": "אימונים"
+        },
+        "contact": {
+            "en": "Contact",
+            "he": "צור קשר"
+        },
+        "pricing": {
+            "en": "Pricing",
+            "he": "מחירים"
+        },
+        "location": {
+            "en": "Location",
+            "he": "מיקום"
+        }
+    },
+    "footer": {
+        "rights": {
+            "en": "All rights reserved.",
+            "he": "כל הזכויות שמורות."
+        },
+        "privacy": {
+            "en": "Privacy Policy",
+            "he": "מדיניות פרטיות"
+        },
+        "accessibility": {
+            "en": "Accessibility Statement",
+            "he": "הצהרת נגישות"
+        }
+    },
+    "brandName": {
+        "en": "Motiv8",
+        "he": "Motiv8"
+    },
+    "notFound": {
+        "title": {
+            "en": "404 - Page Not Found",
+            "he": "404 - הדף לא נמצא"
+        },
+        "message": {
+            "en": "The page you are looking for does not exist.",
+            "he": "הדף שחיפשת אינו קיים."
+        },
+        "homeButton": {
+            "en": "Back to Home",
+            "he": "חזרה לדף הבית"
+        }
+    },
+    "send": {
+        "en": "Send",
+        "he": "שלח"
+    },
+    "sending": {
+        "en": "Sending...",
+        "he": "שולח..."
+    },
+    "close": {
+        "en": "Close",
+        "he": "סגור"
+    },
+    "tryAgain": {
+        "en": "Try Again",
+        "he": "נסה שוב"
+    },
+    "cancel": {
+        "en": "Cancel",
+        "he": "ביטול"
+    },
+    "pause": {
+        "en": "Pause Autoplay",
+        "he": "עצור ניגון אוטומטי"
+    },
+    "play": {
+        "en": "Start Autoplay",
+        "he": "הפעל ניגון אוטומטי"
+    }
+}

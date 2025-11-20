@@ -1,0 +1,146 @@
+/* .homePage {
+    Container styles if needed 
+} */
+
+.heroSection {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 6rem 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.heroContent h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.heroContent p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnLarge {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+}
+
+.welcomeSection {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.welcomeContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcomeContent h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.welcomeContent p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+}
+
+.meetSection {
+    padding: 4rem 0;
+    background-color: var(--color-gray-light);
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-black);
+}
+
+.meetGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.meetCard {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.meetCard:hover {
+    transform: translateY(-5px);
+}
+
+.meetCard h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.meetCard p {
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+}
+
+.gallerySection {
+    padding: 4rem 0;
+    background-color: var(--color-white);
+}
+
+.successSection {
+    padding: 5rem 0;
+    background-color: var(--color-gray-light); // Changed from black to grey
+    color: var(--color-black); // Changed from white to black
+    text-align: center;
+}
+
+.successSection .sectionTitle {
+    color: var(--color-black); // Changed from white to black
+    margin-bottom: 0.5rem;
+}
+
+.successSection .sectionTitle::after {
+    background-color: var(--color-primary);
+}
+
+.successSection .sectionSubtitle {
+    color: var(--color-gray-dark); // Changed from light gray to dark gray
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .heroContent h1 {
+        font-size: 2.5rem;
+    }
+
+    .heroContent p {
+        font-size: 1.2rem;
+    }
+
+    .meetSection,
+    .successSection {
+        padding: 3rem 0;
+    }
+}

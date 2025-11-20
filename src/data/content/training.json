@@ -1,0 +1,126 @@
+{
+    "title": {
+        "en": "Training Options",
+        "he": "אפשרויות אימון"
+    },
+    "options": [
+        {
+            "title": {
+                "en": "Personal Training",
+                "he": "אימון אישי"
+            },
+            "desc": {
+                "en": "One-on-one focus tailored to your specific needs and goals.",
+                "he": "יחס אישי אחד על אחד המותאם לצרכים ולמטרות הספציפיות שלך."
+            },
+            "features": {
+                "en": [
+                    "Personalized plans",
+                    "Direct attention",
+                    "Flexible scheduling"
+                ],
+                "he": [
+                    "תוכניות מותאמות אישית",
+                    "תשומת לב אישית",
+                    "לוח זמנים גמיש"
+                ]
+            }
+        },
+        {
+            "title": {
+                "en": "Group Classes",
+                "he": "אימוני קבוצות"
+            },
+            "desc": {
+                "en": "High-energy classes that combine strength, cardio, and community.",
+                "he": "שיעורים באנרגיה גבוהה המשלבים כוח, אירובי וקהילה."
+            },
+            "features": {
+                "en": [
+                    "High energy",
+                    "Community feel",
+                    "Expert instruction"
+                ],
+                "he": [
+                    "אנרגיה גבוהה",
+                    "תחושת קהילה",
+                    "הדרכה מקצועית"
+                ]
+            }
+        },
+        {
+            "title": {
+                "en": "Functional Strength",
+                "he": "כוח פונקציונלי"
+            },
+            "desc": {
+                "en": "Build real-world strength that improves your daily life.",
+                "he": "בנה כוח אמיתי שמשפר את חיי היומיום שלך."
+            },
+            "features": {
+                "en": [
+                    "Real-world strength",
+                    "Mobility work",
+                    "Injury prevention"
+                ],
+                "he": [
+                    "כוח שימושי",
+                    "עבודת ניידות",
+                    "מניעת פציעות"
+                ]
+            }
+        },
+        {
+            "title": {
+                "en": "HIIT",
+                "he": "אימון אינטרוולים (HIIT)"
+            },
+            "desc": {
+                "en": "High Intensity Interval Training to burn fat and boost endurance.",
+                "he": "אימון אינטרוולים בעצימות גבוהה לשריפת שומן ושיפור הסיבולת."
+            },
+            "features": {
+                "en": [
+                    "Fat burning",
+                    "Endurance boost",
+                    "Short sessions"
+                ],
+                "he": [
+                    "שריפת שומן",
+                    "שיפור סיבולת",
+                    "אימונים קצרים"
+                ]
+            }
+        }
+    ],
+    "hours": {
+        "title": {
+            "en": "Working Hours",
+            "he": "שעות פעילות"
+        },
+        "weekdays": {
+            "label": {
+                "en": "Sunday - Thursday",
+                "he": "ראשון - חמישי"
+            },
+            "time": "09:00 - 18:00"
+        },
+        "friday": {
+            "label": {
+                "en": "Friday",
+                "he": "שישי"
+            },
+            "time": "08:00 - 13:00"
+        },
+        "saturday": {
+            "label": {
+                "en": "Saturday",
+                "he": "שבת"
+            },
+            "time": {
+                "en": "Closed",
+                "he": "סגור"
+            }
+        }
+    }
+}

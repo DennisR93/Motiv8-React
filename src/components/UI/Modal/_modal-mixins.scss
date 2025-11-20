@@ -1,0 +1,120 @@
+@use "sass:color";
+
+@mixin overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@mixin modal-container {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 600px;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease-out;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    @media (max-width: 480px) {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@mixin close-button {
+    position: absolute;
+    top: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--color-gray-dark);
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+
+    // LTR Default (Right side)
+    right: 1rem;
+
+    // RTL Support
+    :global([dir="rtl"]) & {
+        right: auto;
+        left: 1rem;
+    }
+}
+
+@mixin title {
+    font-size: 1.8rem;
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+    }
+}
+
+@mixin subtitle {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+@mixin primary-button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+
+    &:hover {
+        background-color: color.adjust(#D32F2F, $lightness: -10%);
+    }
+}
+
+@mixin animations {
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

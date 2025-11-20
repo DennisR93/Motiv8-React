@@ -1,0 +1,127 @@
+{
+    "title": {
+        "en": "Membership Plans",
+        "he": "חבילות חברות"
+    },
+    "subtitle": {
+        "en": "Choose the plan that fits your goals",
+        "he": "בחר את התוכנית המתאימה למטרות שלך"
+    },
+    "toggle": {
+        "monthly": {
+            "en": "Monthly",
+            "he": "חודשי"
+        },
+        "quarterly": {
+            "en": "Quarterly",
+            "he": "רבעוני"
+        },
+        "annual": {
+            "en": "Annual",
+            "he": "שנתי"
+        },
+        "mo": {
+            "en": "mo",
+            "he": "חודשי"
+        },
+        "qtr": {
+            "en": "qtr",
+            "he": "רבעוני"
+        },
+        "yr": {
+            "en": "yr",
+            "he": "שנתי"
+        }
+    },
+    "plans": [
+        {
+            "id": "basic",
+            "name": {
+                "en": "Basic",
+                "he": "בסיסי"
+            },
+            "price": {
+                "monthly": "250",
+                "quarterly": "700",
+                "annual": "2500"
+            },
+            "features": {
+                "en": [
+                    "Gym Access",
+                    "Locker Room",
+                    "1 Intro Session"
+                ],
+                "he": [
+                    "גישה לחדר כושר",
+                    "מלתחות",
+                    "אימון היכרות אחד"
+                ]
+            },
+            "cta": {
+                "en": "Select Plan",
+                "he": "בחר תוכנית"
+            }
+        },
+        {
+            "id": "pro",
+            "name": {
+                "en": "Pro",
+                "he": "מקצועי"
+            },
+            "popular": true,
+            "price": {
+                "monthly": "350",
+                "quarterly": "950",
+                "annual": "3500"
+            },
+            "features": {
+                "en": [
+                    "All Basic Features",
+                    "Group Classes",
+                    "Nutrition Guide",
+                    "Towel Service"
+                ],
+                "he": [
+                    "כל יתרונות הבסיסי",
+                    "שיעורי קבוצות",
+                    "מדריך תזונה",
+                    "שירות מגבות"
+                ]
+            },
+            "cta": {
+                "en": "Join Now",
+                "he": "הצטרף עכשיו"
+            }
+        },
+        {
+            "id": "elite",
+            "name": {
+                "en": "Elite",
+                "he": "עילית"
+            },
+            "price": {
+                "monthly": "500",
+                "quarterly": "1350",
+                "annual": "5000"
+            },
+            "features": {
+                "en": [
+                    "All Pro Features",
+                    "Personal Training (2x/mo)",
+                    "Sauna Access",
+                    "Guest Pass"
+                ],
+                "he": [
+                    "כל יתרונות המקצועי",
+                    "אימון אישי (פעמיים בחודש)",
+                    "גישה לסאונה",
+                    "כניסת אורח"
+                ]
+            },
+            "cta": {
+                "en": "Go Elite",
+                "he": "לך על הטוב ביותר"
+            }
+        }
+    ]
+}

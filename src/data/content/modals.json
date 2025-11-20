@@ -1,0 +1,82 @@
+{
+    "form": {
+        "title": {
+            "en": "Join Motiv8",
+            "he": "הצטרפו ל-Motiv8"
+        },
+        "subtitle": {
+            "en": "Fill out the form and we will get back to you shortly.",
+            "he": "מלאו את הטופס ונחזור אליכם בהקדם."
+        },
+        "labels": {
+            "fullName": {
+                "en": "Full Name",
+                "he": "שם מלא"
+            },
+            "plan": {
+                "en": "Selected Plan",
+                "he": "תוכנית נבחרת"
+            },
+            "phone": {
+                "en": "Phone Number",
+                "he": "מספר טלפון"
+            },
+            "email": {
+                "en": "Email Address",
+                "he": "כתובת אימייל"
+            },
+            "contactMethod": {
+                "en": "Preferred Contact Method",
+                "he": "דרך התקשרות מועדפת"
+            }
+        },
+        "methods": {
+            "whatsapp": {
+                "en": "WhatsApp",
+                "he": "וואטסאפ"
+            },
+            "call": {
+                "en": "Phone Call",
+                "he": "שיחה טלפונית"
+            },
+            "email": {
+                "en": "Email",
+                "he": "אימייל"
+            }
+        },
+        "errors": {
+            "required": {
+                "en": "This field is required",
+                "he": "שדה זה הוא חובה"
+            },
+            "invalidPhone": {
+                "en": "Invalid phone number",
+                "he": "מספר טלפון לא תקין"
+            },
+            "invalidEmail": {
+                "en": "Invalid email address",
+                "he": "כתובת אימייל לא תקינה"
+            }
+        },
+        "success": {
+            "title": {
+                "en": "Request Sent!",
+                "he": "הבקשה נשלחה!"
+            },
+            "message": {
+                "en": "We received your details and will contact you soon.",
+                "he": "קיבלנו את הפרטים שלך ונחזור אליך בהקדם."
+            }
+        },
+        "error": {
+            "title": {
+                "en": "Something went wrong",
+                "he": "משהו השתבש"
+            },
+            "message": {
+                "en": "We couldn't send your request. Please try again later.",
+                "he": "לא הצלחנו לשלוח את הבקשה. אנא נסה שוב מאוחר יותר."
+            }
+        }
+    }
+}

@@ -1,0 +1,324 @@
+.siteHeader {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; // Adjust based on logo aspect ratio
+    width: auto;
+}
+
+.mainNav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.mainNav a {
+    font-weight: 500;
+    transition: color 0.2s;
+    position: relative; // Needed for pseudo-element positioning
+}
+
+.mainNav a:hover,
+.mainNav :global(.active) {
+    /* NavLink adds 'active' class globally by default, or we need to handle it */
+    color: var(--color-primary);
+}
+
+@media (min-width: 769px) {
+    .mainNav :global(.active) {
+        border-bottom: none; // Remove previous border
+        padding-bottom: 2px;
+    }
+
+    .mainNav :global(.active)::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: -10%;
+        width: 120%;
+        height: 2px; // Slightly thicker for visibility
+        background-color: var(--color-primary);
+    }
+}
+
+/* Language Dropdown */
+.langDropdown {
+    position: relative;
+}
+
+.dropdownTrigger {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.dropdownTrigger:hover {
+    background-color: #2a2a2a;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* Or right: 0 depending on direction, handled by RTL usually */
+    right: 0;
+    margin-top: 4px;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-gray-dark);
+    border-radius: 4px;
+    padding: 4px 0;
+    list-style: none;
+    z-index: 1001;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+}
+
+/* RTL Adjustment for dropdown alignment */
+[dir="rtl"] .dropdownMenu {
+    left: auto;
+    /* right: 0 is default for RTL usually, but let's ensure */
+}
+
+.dropdownMenu li {
+    padding: 8px 16px;
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.dropdownMenu li:hover {
+    background-color: var(--color-primary);
+}
+
+.dropdownMenu li.active {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.dropdownMenu li.active:hover {
+    color: var(--color-white);
+}
+
+.langSelect {
+    background: transparent;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    /* Remove default arrow in some browsers if desired, or style it */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
+}
+
+.langSelect option {
+    color: var(--color-black);
+    /* Options need to be visible on white background dropdown */
+}
+
+.langSelect:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1002;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-white);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.navWrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        /* Mobile Layout: Hamburger - Logo - (Spacer/Empty) */
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* LTR (English): Hamburger Left, Logo Center */
+    :global([dir="ltr"]) .headerContainer {
+        flex-direction: row;
+        /* Default order: Hamburger, Logo, NavWrapper */
+    }
+
+    /* Logo Center Logic */
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* LTR: Hamburger Left (Default order is fine if it's first in DOM) */
+    :global([dir="ltr"]) .hamburger {
+        order: -1;
+        /* Ensure it's on the left */
+        margin-right: auto;
+    }
+
+    /* RTL: Hamburger Right */
+    :global([dir="rtl"]) .hamburger {
+        order: -1;
+        /* In RTL flex-direction row, first item is on the right */
+        margin-left: auto;
+        /* Push to right? No, in RTL margin-left pushes to left. Wait. */
+        /* In RTL, flex-start is Right. So order -1 puts it at the start (Right). */
+        /* We want Hamburger on Right. */
+    }
+
+    /* RTL Header Container */
+    :global([dir="rtl"]) .headerContainer {
+        /* Default is row, which in RTL means start is Right. */
+        /* Items: Hamburger, Logo, NavWrapper */
+        /* Hamburger at start (Right). Logo Absolute Center. NavWrapper (Drawer) fixed. */
+    }
+
+    .navWrapper {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 70%;
+        /* Drawer width */
+        max-width: 300px;
+        background-color: var(--color-black);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 2rem 2rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1001;
+    }
+
+    /* LTR Drawer: Slide from Left (since hamburger is on left) */
+    :global([dir="ltr"]) .navWrapper {
+        left: 0;
+        right: auto;
+        transform: translateX(-100%);
+    }
+
+    :global([dir="ltr"]) .navWrapper.open {
+        transform: translateX(0);
+    }
+
+    /* RTL Drawer: Slide from Right (since hamburger is on right) */
+    :global([dir="rtl"]) .navWrapper {
+        right: 0;
+        left: auto;
+        transform: translateX(100%);
+    }
+
+    :global([dir="rtl"]) .navWrapper.open {
+        transform: translateX(0);
+    }
+
+    .mainNav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .mainNav a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0.5rem 0;
+        border-bottom: none;
+        /* Removed underline as requested */
+    }
+
+    .langDropdown {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .dropdownTrigger {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .dropdownMenu {
+        position: static;
+        /* Expand inline on mobile */
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}

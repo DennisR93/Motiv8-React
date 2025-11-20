@@ -1,0 +1,129 @@
+.carouselContainer {
+    width: 100%;
+    max-width: 800px; // Reduced from 1200px to bring arrows closer
+    margin: 0 auto;
+    padding: 2rem 0;
+    position: relative;
+
+    // Swiper custom styles
+    :global(.swiper) {
+        width: 100%;
+        padding-bottom: 3rem;
+        // Removed side padding to fix "broken image" look. Swiper handles spacing.
+    }
+
+    :global(.swiper-slide) {
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+.slideContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.imageWrapper {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.text {
+    font-size: 1.2rem;
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+// Navigation Arrows Customization
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+    color: var(--color-primary) !important;
+    width: 2rem; // Constrain width
+    height: 2rem;
+
+    &::after {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.autoplayControl {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: var(--color-primary);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: #fff;
+    }
+
+    &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
+    svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        fill: currentColor;
+    }
+}
+
+:global([dir="rtl"]) .autoplayControl {
+    right: auto;
+    left: 1rem;
+}
+
+// RTL Support: Swiper handles direction automatically, so we just ensure icons are correct if needed.
+// Removing manual rotation as it might be double-correcting.
+:global([dir="rtl"]) {
+    // If Swiper doesn't flip icons, we might need to swap content codes, but usually it does.
+    // Let's trust Swiper's default RTL behavior first.
+}

@@ -1,0 +1,159 @@
+{
+    "title": {
+        "en": "About Motiv8",
+        "he": "אודות Motiv8"
+    },
+    "mission": {
+        "title": {
+            "en": "Our Mission",
+            "he": "המשימה שלנו"
+        },
+        "text": {
+            "en": "At Motiv8 Gym, our mission is to inspire and empower people to transform their lives through fitness, providing personalized guidance, advanced facilities, and a supportive community.",
+            "he": "ב-Motiv8 Gym, המשימה שלנו היא לעורר השראה ולהעצים אנשים לשנות את חייהם באמצעות כושר, תוך מתן הדרכה אישית, מתקנים מתקדמים וקהילה תומכת."
+        }
+    },
+    "vision": {
+        "title": {
+            "en": "Our Vision",
+            "he": "החזון שלנו"
+        },
+        "text": {
+            "en": "To be the leading fitness center known for transformative results, training expertise, and a motivating environment that helps every member achieve their personal best.",
+            "he": "להיות מרכז הכושר המוביל הידוע בתוצאות משנות חיים, מומחיות באימון וסביבה מעוררת מוטיבציה שעוזרת לכל חבר להשיג את המיטב האישי שלו."
+        }
+    },
+    "history": {
+        "title": {
+            "en": "Our History",
+            "he": "ההיסטוריה שלנו"
+        },
+        "timeline": [
+            {
+                "year": "2010",
+                "title": {
+                    "en": "Foundation",
+                    "he": "הקמה"
+                },
+                "desc": {
+                    "en": "Motiv8 Gym was founded with a mission to provide personalized training.",
+                    "he": "Motiv8 Gym הוקם במטרה לספק אימון אישי."
+                }
+            },
+            {
+                "year": "2015",
+                "title": {
+                    "en": "Expansion",
+                    "he": "התרחבות"
+                },
+                "desc": {
+                    "en": "Expanded facilities and added specialized trainers.",
+                    "he": "הרחבת המתקנים והוספת מאמנים מתמחים."
+                }
+            },
+            {
+                "year": "2020",
+                "title": {
+                    "en": "Renovation",
+                    "he": "שיפוץ"
+                },
+                "desc": {
+                    "en": "Completed a full renovation with state-of-the-art equipment.",
+                    "he": "הושלם שיפוץ מלא עם ציוד מתקדם."
+                }
+            },
+            {
+                "year": "Today",
+                "title": {
+                    "en": "Today",
+                    "he": "כיום"
+                },
+                "desc": {
+                    "en": "Continuing to transform lives with expert guidance.",
+                    "he": "ממשיכים לשנות חיים עם הדרכה מקצועית."
+                }
+            }
+        ]
+    },
+    "team": {
+        "title": {
+            "en": "Meet Our Team",
+            "he": "הכירו את הצוות"
+        },
+        "members": [
+            {
+                "name": "John Doe",
+                "role": {
+                    "en": "Head Trainer",
+                    "he": "מאמן ראשי"
+                },
+                "bio": {
+                    "en": "Specializes in strength training and weight loss.",
+                    "he": "מתמחה באימוני כוח וירידה במשקל."
+                }
+            },
+            {
+                "name": "Sarah Smith",
+                "role": {
+                    "en": "Fitness Coach",
+                    "he": "מאמנת כושר"
+                },
+                "bio": {
+                    "en": "Certified in functional training and mobility.",
+                    "he": "מוסמכת באימון פונקציונלי וניידות."
+                }
+            },
+            {
+                "name": "Michael Rodriguez",
+                "role": {
+                    "en": "Nutrition Specialist",
+                    "he": "מומחה תזונה"
+                },
+                "bio": {
+                    "en": "Combines training with nutrition plans.",
+                    "he": "משלב אימונים עם תוכניות תזונה."
+                }
+            },
+            {
+                "name": "Emma Chen",
+                "role": {
+                    "en": "Yoga Coach",
+                    "he": "מאמנת יוגה"
+                },
+                "bio": {
+                    "en": "Focuses on flexibility and recovery.",
+                    "he": "מתמקדת בגמישות והתאוששות."
+                }
+            }
+        ]
+    },
+    "testimonials": {
+        "title": {
+            "en": "What Our Members Say",
+            "he": "מה החברים שלנו אומרים"
+        },
+        "list": [
+            {
+                "quote": {
+                    "en": "Motiv8 Gym changed my life. I've lost 45 pounds.",
+                    "he": "Motiv8 Gym שינה את חיי. ירדתי 20 קילו."
+                },
+                "author": "David B."
+            },
+            {
+                "quote": {
+                    "en": "The trainers truly care about your progress.",
+                    "he": "למאמנים באמת אכפת מההתקדמות שלך."
+                },
+                "author": "Sarah T."
+            },
+            {
+                "quote": {
+                    "en": "Not just a gym, but a community.",
+                    "he": "לא רק חדר כושר, אלא קהילה."
+                },
+                "author": "Michael R."
+            }
+        ]
+    }
+}

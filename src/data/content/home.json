@@ -1,0 +1,147 @@
+{
+    "hero": {
+        "title": {
+            "en": "Unleash Your Potential",
+            "he": "שחרר את הפוטנציאל שלך"
+        },
+        "subtitle": {
+            "en": "Join Motiv8 and transform your life with expert coaching and a supportive community.",
+            "he": "הצטרף ל-Motiv8 ושנה את חייך עם אימון מקצועי וקהילה תומכת."
+        },
+        "cta": {
+            "en": "Start Training Today",
+            "he": "התחל להתאמן היום"
+        }
+    },
+    "welcome": {
+        "title": {
+            "en": "Welcome To Motiv8 GYM",
+            "he": "ברוכים הבאים ל-Motiv8 GYM"
+        },
+        "description": {
+            "en": "Motiv8 Gym is dedicated to empowering individuals to achieve their fitness goals with personalized care and expert guidance. Whether you're working with one of our professional personal trainers or joining a group session led by our experienced gym instructors, we tailor every workout to suit your unique needs and aspirations. At Motiv8, we combine state-of-the-art equipment with motivational coaching to create a supportive and dynamic environment that inspires growth.",
+            "he": "Motiv8 Gym מוקדש להעצמת אנשים להשגת מטרות הכושר שלהם עם יחס אישי והדרכה מקצועית. בין אם אתם עובדים עם אחד המאמנים האישיים המקצועיים שלנו או מצטרפים לאימון קבוצתי בהנחיית המדריכים המנוסים שלנו, אנו מתאימים כל אימון לצרכים ולשאיפות הייחודיים שלכם. ב-Motiv8, אנו משלבים ציוד מתקדם עם אימון מוטיבציוני ליצירת סביבה תומכת ודינמית המעוררת צמיחה."
+        }
+    },
+    "meet": {
+        "title": {
+            "en": "Meet the Place",
+            "he": "הכירו את המקום"
+        },
+        "sections": [
+            {
+                "title": {
+                    "en": "Welcome to Our Gym",
+                    "he": "ברוכים הבאים לחדר הכושר שלנו"
+                },
+                "text": {
+                    "en": "Our state-of-the-art facilities are designed to inspire and motivate you to achieve your fitness goals.",
+                    "he": "המתקנים המתקדמים שלנו נועדו לעורר השראה ולהניע אתכם להשיג את מטרות הכושר שלכם."
+                }
+            },
+            {
+                "title": {
+                    "en": "Explore Our Equipment",
+                    "he": "גלו את הציוד שלנו"
+                },
+                "text": {
+                    "en": "We offer the latest equipment to ensure your workouts are efficient and enjoyable.",
+                    "he": "אנו מציעים את הציוד החדיש ביותר כדי להבטיח שהאימונים שלכם יהיו יעילים ומהנים."
+                }
+            },
+            {
+                "title": {
+                    "en": "Join Our Community",
+                    "he": "הצטרפו לקהילה שלנו"
+                },
+                "text": {
+                    "en": "Be part of a supportive and empowering community focused on health and well-being.",
+                    "he": "היו חלק מקהילה תומכת ומעצימה המתמקדת בבריאות ורווחה."
+                }
+            }
+        ]
+    },
+    "gallery": {
+        "title": {
+            "en": "Gym Gallery",
+            "he": "גלריית המכון"
+        },
+        "items": [
+            {
+                "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop",
+                "text": {
+                    "en": "Modern Equipment",
+                    "he": "ציוד חדיש"
+                }
+            },
+            {
+                "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop",
+                "text": {
+                    "en": "Free Weights Area",
+                    "he": "אזור משקולות חופשיים"
+                }
+            },
+            {
+                "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=800&auto=format&fit=crop",
+                "text": {
+                    "en": "Cardio Zone",
+                    "he": "אזור אירובי"
+                }
+            },
+            {
+                "image": "https://images.unsplash.com/photo-1574680096141-1cddd32e0340?q=80&w=800&auto=format&fit=crop",
+                "text": {
+                    "en": "Functional Training",
+                    "he": "אימון פונקציונלי"
+                }
+            },
+            {
+                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop",
+                "text": {
+                    "en": "Spacious Studio",
+                    "he": "סטודיו מרווח"
+                }
+            },
+            {
+                "image": "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=800&auto=format&fit=crop",
+                "text": {
+                    "en": "Professional Atmosphere",
+                    "he": "אווירה מקצועית"
+                }
+            }
+        ]
+    },
+    "successStories": {
+        "title": {
+            "en": "Success Stories",
+            "he": "סיפורי הצלחה"
+        },
+        "subtitle": {
+            "en": "Real people, real results.",
+            "he": "אנשים אמיתיים, תוצאות אמיתיות."
+        },
+        "items": [
+            {
+                "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop",
+                "text": {
+                    "en": "Sarah lost 15kg in 6 months",
+                    "he": "שרה ירדה 15 ק\"ג ב-6 חודשים"
+                }
+            },
+            {
+                "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop",
+                "text": {
+                    "en": "Mike gained 10kg of muscle",
+                    "he": "מייק העלה 10 ק\"ג שריר"
+                }
+            },
+            {
+                "image": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=800&auto=format&fit=crop",
+                "text": {
+                    "en": "Anna improved her mobility",
+                    "he": "אנה שיפרה את הגמישות שלה"
+                }
+            }
+        ]
+    }
+}
