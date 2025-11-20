@@ -1,22 +1,21 @@
 .carouselContainer {
     width: 100%;
-    max-width: 800px; // Reduced from 1200px to bring arrows closer
+    max-width: 800px; // Increased back to 800px to accommodate arrows + image
     margin: 0 auto;
     padding: 2rem 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    // Swiper custom styles
-    :global(.swiper) {
-        width: 100%;
-        padding-bottom: 3rem;
-        // Removed side padding to fix "broken image" look. Swiper handles spacing.
-    }
-
-    :global(.swiper-slide) {
-        height: auto;
-        display: flex;
-        justify-content: center;
-    }
+.carouselContentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    position: relative;
 }
 
 .sectionTitle {
@@ -27,13 +26,23 @@
     text-transform: uppercase;
 }
 
+.swiperContainer {
+    width: 100%;
+    max-width: 600px; // Match image width
+    margin: 0;
+
+    :global(.swiper-wrapper) {
+        align-items: center;
+    }
+}
+
 .slideContent {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     width: 100%;
-    padding: 0 1rem;
 }
 
 .imageWrapper {
@@ -64,30 +73,43 @@
     max-width: 600px;
 }
 
-// Navigation Arrows Customization
-:global(.swiper-button-next),
-:global(.swiper-button-prev) {
-    color: var(--color-primary) !important;
-    width: 2rem; // Constrain width
-    height: 2rem;
+.navArrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+    flex-shrink: 0; // Prevent shrinking
 
-    &::after {
-        font-size: 2rem;
-        font-weight: bold;
+    svg {
+        width: 3rem; // Larger arrows
+        height: 3rem;
+        fill: currentColor;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        color: var(--color-primary-dark);
+    }
+
+    &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
     }
 
     @media (max-width: 768px) {
-        display: none;
+        display: none; // Hide external arrows on mobile, rely on swipe
     }
 }
 
 .autoplayControl {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 10;
+    margin-top: 1rem; // Position below the carousel
     background: rgba(255, 255, 255, 0.8);
-    border: none;
+    border: 1px solid var(--color-gray-light);
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
@@ -116,14 +138,11 @@
     }
 }
 
-:global([dir="rtl"]) .autoplayControl {
-    right: auto;
-    left: 1rem;
-}
+// RTL Support
+:global([dir="rtl"]) .navArrow {
+    transform: scaleX(-1); // Flip arrow direction for RTL
 
-// RTL Support: Swiper handles direction automatically, so we just ensure icons are correct if needed.
-// Removing manual rotation as it might be double-correcting.
-:global([dir="rtl"]) {
-    // If Swiper doesn't flip icons, we might need to swap content codes, but usually it does.
-    // Let's trust Swiper's default RTL behavior first.
+    &:hover {
+        transform: scaleX(-1) scale(1.1);
+    }
 }
